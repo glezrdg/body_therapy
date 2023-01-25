@@ -1,0 +1,100 @@
+
+.logo{
+    width: 120px;
+    height: 110px;
+}
+.fuente{
+    font-family: 'Lavishly Yours', cursive;
+}
+.letra{
+    width: 350px;
+    height: 130px;
+}
+
+.nav-items {
+    color: #000;
+  position: relative;
+  text-decoration: none;
+  border: solid 3px;
+  padding: 10px;
+  }
+  
+ .nav-items::before {
+    background:black;
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+  }
+  
+.nav-items:hover::before {
+    transform: scaleX(1);
+  transform-origin: bottom;
+}
+
+.nav-items:hover a {
+    color: #fff;
+}
+a{
+ transition: 0.4s ease-out;
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  *, *:after, *:before {
+    box-sizing: border-box;
+}
+
+.post {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    max-width: 400px;
+    position: relative;
+    padding: 2rem;
+    box-shadow: inset 0 0 0 4px #000, inset -4px -4px 0 6px #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+.post:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transform-origin: 0 bottom 0;
+    transform: scaleY(0);
+    transition: 0.4s ease-out;
+}
+.post:hover .post-title {
+    color: #fff;
+}
+.post:hover:before {
+    transform: scaleY(1);
+}
+.post-title {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.333;
+    transition: 0.4s ease-out;
+}
