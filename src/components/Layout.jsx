@@ -1,14 +1,13 @@
 import React from "react";
 import "./Layout.css";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <div className="w-full  h-28 w- flex items-center justify-around  border ">
+      <div className="w-full  h-[10vh] w- flex items-center justify-around  border fixed z-40 bg-slate-200">
         <div className="p-2 flex items-center">
-          <img src="../../Logo rita.png" alt="" className="logo mt-2" />
-
-          <h1 className="text-4xl  ml-5 fuente">BodyTherapyRD</h1>
+          <h1 className="text-4xl font-semibold  ml-5 fuente">BodyTherapy</h1>
         </div>
 
         <ul className="flex w-1/2 justify-between items-center">
@@ -40,10 +39,15 @@ const Layout = ({ children }) => {
             </a>
           </li>
         </ul>
+        <a
+          href="https://wa.me/18493409960"
+          className="flex px-4 py-2 ml-10 items-center border border-black font-bold"
+        >
+          Escribenos
+          <IoLogoWhatsapp className="ml-2" />
+        </a>
       </div>
-      <main className="w-full h-[88vh] lg:h-[83vh] bg-red-400 lg:px-10 lg:py-5 px-32 py-20 ">
-        {children}
-      </main>
+      <main className="w-full ">{children}</main>
     </div>
   );
 };

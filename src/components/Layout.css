@@ -1,7 +1,7 @@
 
 .logo{
-    width: 120px;
-    height: 110px;
+    width: 90px;
+    height: 80px;
 }
 .fuente{
     font-family: 'Cinzel', serif;
@@ -10,14 +10,16 @@
     width: 350px;
     height: 130px;
 }
-
+.bg{
+    background-color: #c8a963;
+}
 .nav-items {
     color: #000;
   position: relative;
   text-decoration: none;
-  border: solid 2px;
+
   padding: 10px;
-  font-weight: 500;
+  font-weight: 600;
   }
   
  .nav-items::before {
