@@ -4,7 +4,7 @@
     height: 110px;
 }
 .fuente{
-    font-family: 'Lavishly Yours', cursive;
+    font-family: 'Cinzel', serif;
 }
 .letra{
     width: 350px;
@@ -15,8 +15,9 @@
     color: #000;
   position: relative;
   text-decoration: none;
-  border: solid 3px;
+  border: solid 2px;
   padding: 10px;
+  font-weight: 500;
   }
   
  .nav-items::before {

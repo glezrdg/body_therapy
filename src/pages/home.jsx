@@ -4,33 +4,13 @@ import { useState, useEffect } from "react";
 import "primereact/resources/themes/lara-light-indigo/theme.css"; //theme
 import "primereact/resources/primereact.min.css"; //core css
 import "primeicons/primeicons.css";
+
+// Utils
+import { carouselImages } from "../utils/carouselImages";
+import Section from "../components/Section";
+
 const Home = () => {
-  const [images, setImages] = useState([
-    {
-      itemImageSrc: "../../home_slide_1.jpg",
-      thumbnailImageSrc: "../../home_slide_1.jpg",
-      alt: "Description for Image 1",
-      title: "Title 1",
-    },
-    {
-      itemImageSrc: "../../home_slide_2.jpg",
-      thumbnailImageSrc: "../../home_slide_2.jpg",
-      alt: "Description for Image 2",
-      title: "Title 2",
-    },
-    {
-      itemImageSrc: "../../terapias-naturales.jpg",
-      thumbnailImageSrc: "../../terapias-naturales.jpg",
-      alt: "Description for Image 3",
-      title: "Title 3",
-    },
-    {
-      itemImageSrc: "../../home_slide_3.jpg",
-      thumbnailImageSrc: "../../home_slide_3.jpg",
-      alt: "Description for Image 3",
-      title: "Title 3",
-    },
-  ]);
+  const [images, setImages] = useState(carouselImages);
 
   // useEffect(() => {
   //   galleriaService.getImages().then((data) => setImages(data));
@@ -100,6 +80,34 @@ const Home = () => {
       <button className="px-6 py-3 bg-green-700 shadow-lg rounded-md text-stone-100 text-xl mt-10 text-center">
         Reserva tu cita!
       </button>
+
+      <Section
+        title={"Transforma tu espiritu"}
+        image="/svg/meditando.svg"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem velit
+        eius quo, tempore sapiente quam modi nam commodi facere quis voluptatum,
+        est quae ullam? Aliquid autem praesentium nostrum dolore corporis."
+      />
+
+      <Section
+        title="Controla tus emociones"
+        reverse
+        bg
+        image="/svg/masaje.svg"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem velit
+        eius quo, tempore sapiente quam modi nam commodi facere quis voluptatum,
+        est quae ullam? Aliquid autem praesentium nostrum dolore corporis."
+      />
+
+      <Section
+        title="Relaja la mente"
+        image="/svg/meditando.svg"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem velit
+        eius quo, tempore sapiente quam modi nam commodi facere quis voluptatum,
+        est quae ullam? Aliquid autem praesentium nostrum dolore corporis."
+      />
+
+      <section></section>
     </div>
   );
 };
